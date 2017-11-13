@@ -7,20 +7,20 @@
 
 var menu = {
 
-    updates: [
+    acceptors: [
         
         { 
             name: "setMenuItem",
             order: 0,
-            update: function(model,data) {
+            acceptor: function(model,data) {
              // change menu item
                 if (data.menuItem) {
                     model.data.popped = data.popped || false ;
                     model.data.menuItem = data.menuItem ;
                     model.data.header.menu.map((item) => item.active = (item.href === data.menuItem)) ;
-                    model.update.p = true ;
-                    model.update.h = true ;
-                    model.update.f = true ;
+                    model.needsUpdate.p = true ;
+                    model.needsUpdate.h = true ;
+                    model.needsUpdate.f = true ;
                     if (model.data.home.blog.blogid) { delete model.data.home.blog.blogid ; }
                 }
             }
@@ -43,7 +43,9 @@ var menu = {
                 return false ;
             }
         }
-    ]
+    ],
+
+    reactors: []
 
 }
 

@@ -35,7 +35,7 @@ let _theme = {
                     <ul class="nav navbar-nav navbar-right">
                         ${repeat(params.header.menu, 
                             (i) => i.href, 
-                            (item, index) => html`<li id="menu-item-${index+1}"><a id="${item.href}" href="#" onclick="return a.setMenuItem({menuItem:'${item.href}'});">${item.label}</a></li>` 
+                            (item, index) => html`<li id="menu-item-${index+1}"><a id="${item.href}" href="#" onclick="return setMenuItem({menuItem:'${item.href}'});">${item.label}</a></li>` 
                         )}
                     </ul>
                 </div>
@@ -187,6 +187,10 @@ let _theme = {
                             </a>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
                     <p class="copyright text-muted">${params.copyright || ''}</p>
                 </div>
             </div>

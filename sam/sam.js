@@ -26,20 +26,21 @@
 
 'use strict' ;
 
-let actions = {
+let SAM = function ({actions, model, state, view, theme, display, components, options}) {
+    // wire the elements of the pattern
+    state.init(view, theme, display, components) ;
+    model.init(state, components, options) ;
+    actions.init(model.present, options) ;
+    components.actions.forEach(function(action) {
+        intent(action.name, function(data, present) {
+            return action.implementation(data, present, model) ;
+        })
+    }) ;
 
-    init(present, options) {
-        options = options || {};
-        actions.present = present ;
-        actions.options = options ;
-    },
+    view.init(model,theme(options))
 
-    present(data) {
-        return false ;
-    }, 
-
-    intents : { } 
-       
+    // render initial state
+    state.representation(model) ;
 }
 
-export { actions } ;
+export { SAM } ;

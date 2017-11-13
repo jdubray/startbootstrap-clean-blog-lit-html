@@ -33,19 +33,19 @@
 // API Endpoints
 
 let model = { 
-        data : {},
-        update: {},
+    data : {},
+    needsUpdate: {},
 
 
     init(state, components, options) {
-        this.state = state ;
-        this.components = components ;
-        this.host = options ;
-        this.data = components.data ;
+        this.state = state 
+        this.components = components 
+        this.options = options 
+        this.data = components.data 
 
-        this.update.h = true ;
-        this.update.p = true ;
-        this.update.f = true ;
+        this.needsUpdate.h = true 
+        this.needsUpdate.p = true 
+        this.needsUpdate.f = true 
         
     },
 
@@ -55,23 +55,18 @@ let model = {
 
         // provide some hints as to what changed 
         // in the model to render the view
-        this.update.h = false ;
-        this.update.p = false ;
-        this.update.f = false ;
-        this.update.render = true ;
+        this.needsUpdate.h = false 
+        this.needsUpdate.p = false 
+        this.needsUpdate.f = false 
+        this.needsUpdate.render = true 
         
-        let self = this ;
-        this.components.filters.forEach((_) => _.filter(self,data)) ;
+        this.components.filters.forEach((_) => _.filter(this,data)) 
 
     },
 
-    CRUD(data) {
-
-        // CRUD
-        let self = this ;
-        this.components.updates.forEach( (_) => {
-            _.update(self,data)
-        }) ;
+    accept(data) {
+        // Execute acceptors
+        this.components.acceptors.forEach( _ => _.acceptor(this,data) ) 
         
     },
 
@@ -80,23 +75,21 @@ let model = {
 
         // perform ancillary assignments
         
-        let self = this ;
-        this.components.postProcessings.forEach((_) => _.post(self,data)) ;
+        this.components.postProcessings.forEach((_) => _.post(this,data)) 
 
     },
                 
-    present(data,next) {
-        data = data || {} ;
+    present(proposal = {}, next) {
     
-        this.applyFilters(data) ;
+        this.applyFilters(proposal) 
 
-        this.CRUD(data) ;    
+        this.accept(proposal) 
 
-        this.postProcessing() ;
+        this.postProcessing() 
     
-        if (this.update.render) { this.state.render(model,next) ; }
+        if (this.needsUpdate.render) { this.state.render(model,next) }
     }
 
 } 
 
-export { model } ;
+export { model } 

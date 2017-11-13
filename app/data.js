@@ -71,6 +71,7 @@ module.exports = function( feedURL, path, domain, collectionName) {
                     intagram: "http://instagram.com/jessie_khoo",
                     pinterest: "http://www.pinterest.com/",
                     linkedin: "https://www.linkedin.com/",
+                    github: "https://github.com/",
                     subscribe: { size: 20, placeHolder: "Your email", submit: "Subscribe" },
                     copyright: "Copyright © Your Website 2016"
                 },

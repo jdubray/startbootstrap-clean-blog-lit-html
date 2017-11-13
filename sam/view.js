@@ -20,9 +20,9 @@ let view = {
         theme = theme || this.theme ;
         
         var output = {
-            header: model.update.h ? theme.header(model.data) : null,
-            footer: model.update.f ? theme.footer(model.data) : null,
-            page: model.update.p ? theme.page(model.data) : null
+            header: model.needsUpdate.h ? theme.header(model.data) : null,
+            footer: model.needsUpdate.f ? theme.footer(model.data) : null,
+            page: model.needsUpdate.p ? theme.page(model.data) : null
         }
         
         return output ;

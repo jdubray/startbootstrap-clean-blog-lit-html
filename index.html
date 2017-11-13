@@ -67,45 +67,76 @@
     <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script -->
     
     <script type="text/javascript">
-        var a = {} ;
-        
+    
         let intent = function(i, f) {
             window[i || '_'] = f 
         }
-		
+        
+        function el(id) {
+            return document.getElementById(id)
+        }
+
 		initPageLifeCycle() ;
 
 	</script>
 	<script type="module">
-
-          import {html, render} from './js/lit-html.js';
-
-
-		  // standart SAM  
-          import {state}       from './sam/state.js' ; 
-          import {model}       from './sam/model.js' ;
-          import {actions}     from './sam/actions.js' ;
-          import {view}        from './sam/view.js' ;
-		  
-		  // application specific
-		  import {theme}       from './components/theme.js' ;
-		  
-		  // initial model, from file
-		  // import {data}		   from './components/model.data.js'
-
-		  // initial model, from server
-		  import {data}		   			from '../app/v1/model.js' 
-		  
-          // You can also fetch the site's metadata from a static file
-          //import {data}                     from './static.model.js'
-
-          import {init, 
-			      getParameterByName,
-				  preparePage, 
-				  checkBackButton} 		from './components/init.components.js' 
+        //////////////////////////////////////////////////////////////////////////////
+        // Imports
+        //
+        //
+        // lit-html
+        import {html, render} from './js/lit-html.js'
 
 
-          class Renderer extends HTMLElement {
+        // standart SAM  
+        import {SAM}        from './sam/sam.js'
+        import {state}      from './sam/state.js'  
+        import {model}      from './sam/model.js' 
+        import {actions}    from './sam/actions.js' 
+        import {view}       from './sam/view.js' 
+          
+        // ---------------------------------------------------------
+        // Application specific
+        // Theme
+		import {theme}      from './components/theme.js' 
+        
+        // Initial Model
+		// From file
+		// import {data}		   from './components/model.data.js'
+
+		// From server
+        import {data}       from '../app/v1/model.js' 
+        
+        // Application Logic
+        import {init, 
+			    getParameterByName,
+				preparePage, 
+				checkBackButton}    from './components/init.components.js' 
+
+        let components = {
+            sections: ['header', 'page', 'footer'],
+            acceptors: [],
+            actions: [],
+            filters:[],
+            postProcessings: [],
+            intents: [],
+            states: {
+                "ready": {
+                    nextAction: () => {return true;}
+                }
+            },
+            data
+        } 
+
+        // add module actions and acceptors
+        init(components) 
+            
+
+        //////////////////////////////////////////////////////////////////////////////
+        // Display State Representation
+        //
+        // Generic Render Component for lit-html Templates
+        class Renderer extends HTMLElement {
 
             render(representation) {
                 // Render state representation
@@ -118,85 +149,38 @@
                 }
             }
 
-          }
+        }
 
-         
-          let sr = window.customElements.get('state-representation') 
-          if (!sr) {
+        let sr = window.customElements.get('state-representation') 
+        if (!sr) {
             window.customElements.define('state-representation', Renderer)      
-          }
-        //   let page = customElements.define('page-representation', HTMLElement)
-        //   let footer = customElements.define('footer-representation', HTMLElement);      
+        }
 
-		  var display = function(representation) {
-                let header = document.getElementById('header') 
-			    let page = document.getElementById('page') 
-			    let footer = document.getElementById('footer') 
-			    preparePage(model) 
-                if (representation.header) { 
-                    // document.getElementById('header-representation').innerHTML = representation.header ; 
-                    header.render(representation.header)
+        let display = function(representation) {
+            preparePage(model) 
+            components.sections.forEach( function(section) {
+                if (representation[section]) {
+                    el(section).render(representation[section])
                 }
-                if (representation.page) { 
-                    page.render(representation.page);
-                }
-                if (representation.footer) { 
-                    footer.render(representation.footer);
-                }
-				initElements() ;
-				checkBackButton(model) ;
-		  }
-		  
-		  var components = {
-			  updates: [],
-			  actions: [],
-			  filters:[],
-			  postProcessings: [],
-			  intents: [],
-			  states: {
-				  "ready": {
-				  		nextAction: () => {return true;}
-			  		}
-				},
-			  data: data
-		  } ;
-
-		  
-			let blogid = getParameterByName('blogid',window.location.href); 
-			if (blogid) {
-				components.data.blog.blogid = blogid ;
-				components.data.menuItem = 'blog';
-			} 
-		 
-            customElements.whenDefined('state-representation').then(() => {
-  
-                // add actions and updates
-                init(components) ;
-
-                var options = {
-                    host : "http://localhost:5625"
-                } ;
-
-                // wire the elements of the pattern
-                state.init(view, theme, display, components) ;
-                model.init(state, components, options) ;
-                actions.init(model.present, options) ;
-                components.actions.forEach(function(action) {
-                    actions[action.name] = function(data, present) {
-                        return action.implementation(data, present, model) ;
-                    }
-                }) ;
-
-                view.init(model,theme(options))
-                
-                a = actions ;
-
-                // render initial state
-                state.representation(model) ;
-
-                console.log('custome element defined');
             })
+            initElements() 
+            checkBackButton(model) 
+        }
+		  
+        // let blogid = getParameterByName('blogid',window.location.href); 
+        // if (blogid) {
+        //     components.data.blog.blogid = blogid ;
+        //     components.data.menuItem = 'blog';
+        // } 
         
+
+        // Instantiate SAM Pattern
+        let options = {
+            host : "http://localhost:5625"
+        } 
+
+        SAM({actions, model, state, view, theme, display, components, options})
+    
     </script>
 
 </body>

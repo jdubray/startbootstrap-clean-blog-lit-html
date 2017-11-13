@@ -5,8 +5,8 @@ import { menu } from './menu.component.js' ;
 // this function wires the application components 
 // to the SAM pattern elements (actions and model updates)
 var init = function(components) {
-    menu.updates.forEach(function(update) {
-        components.updates.push(update) ;
+    menu.acceptors.forEach(function(acceptor) {
+        components.acceptors.push(acceptor) ;
     }) ;
 
     menu.actions.forEach(function(action) {
