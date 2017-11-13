@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <id>tag:github.com,2008:/blog</id>
+  <link rel="alternate" type="text/html" href="https://github.com/blog"/>
+  <link rel="self" type="application/atom+xml" href="https://github.com/blog.atom"/>
+  <title>The GitHub Blog</title>
+  <updated>2017-11-08T15:20:15Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Post/2460</id>
+    <published>2017-11-08T15:20:15Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2460-archiving-repositories"/>
+    <title>Archiving repositories</title>
+    <category term="ship"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;Just because a repository isn't actively developed anymore and you don't want to accept additional contributions doesn't mean you want to delete it. Now archive repositories on GitHub to make them read-only.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/7321362/32558403-450458dc-c46a-11e7-96f9-af31d2206acb.png" target="_blank"&gt;&lt;img width="2006" alt="archived repository banner" src="https://user-images.githubusercontent.com/7321362/32558403-450458dc-c46a-11e7-96f9-af31d2206acb.png" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Archiving a repository makes it read-only to everyone (including repository owners). This includes editing the repository, issues, pull requests, labels, milestones, projects, wiki, releases, commits, tags, branches, reactions and comments. No one can create new issues, pull requests, or comments on an archived repository, but you can still fork archived repositories—allowing development to continue elsewhere for archived open source projects.&lt;/p&gt;
+&lt;p&gt;To archive a repository, go to your Repository Settings Page and click &lt;strong&gt;Archive this repository&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/125011/32273119-0fc5571e-bef9-11e7-9909-d137268a1d6d.png" target="_blank"&gt;&lt;img width="1943" alt="archive repository button" src="https://user-images.githubusercontent.com/125011/32273119-0fc5571e-bef9-11e7-9909-d137268a1d6d.png" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Before archiving your repository, make sure you've changed its settings and consider closing all open issues and pull requests. You should also update your README and description to make it clear to visitors that it's no longer possible to contribute.&lt;/p&gt;
+&lt;p&gt;If you change your mind and want to unarchive your repository, click &lt;strong&gt;Unarchive this repository&lt;/strong&gt; in the same place. Please note that most archived repository settings are hidden and you'll have to unarchive the repository to change them.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/125011/32541128-9d67a064-c466-11e7-857e-3834054ba3c9.png" target="_blank"&gt;&lt;img width="1194" alt="archived labelled repository" src="https://user-images.githubusercontent.com/125011/32541128-9d67a064-c466-11e7-857e-3834054ba3c9.png" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To learn more, check out &lt;a href="https://help.github.com/articles/about-archiving-repositories/"&gt;the documentation&lt;/a&gt; on archiving repositories. Happy archiving!&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars2.githubusercontent.com/u/125011?v=4"/>
+    <author>
+      <name>Mike McQuaid</name>
+      <uri>https://github.com/MikeMcQuaid</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2463</id>
+    <published>2017-11-07T19:36:05Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2463-github-welcomes-all-ci-tools"/>
+    <title>GitHub welcomes all CI tools</title>
+    <category term="enterprise"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/29592817/32509084-2d52c56c-c3a1-11e7-8c49-901f0f601faf.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/29592817/32509084-2d52c56c-c3a1-11e7-8c49-901f0f601faf.png" alt="GitHub and all CI tools" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Continuous Integration (&lt;a href="https://en.wikipedia.org/wiki/Continuous_integration"&gt;CI&lt;/a&gt;) tools help you stick to your team's quality standards by running tests every time you push a new commit and &lt;a href="https://github.com/blog/2051-protected-branches-and-required-status-checks"&gt;reporting the results&lt;/a&gt; to a pull request. Combined with continuous delivery (&lt;a href="https://en.wikipedia.org/wiki/Continuous_delivery"&gt;CD&lt;/a&gt;) tools, you can also test your code on multiple configurations, run additional performance tests, and automate every step &lt;a href="https://developer.github.com/changes/2014-01-09-preview-the-new-deployments-api/"&gt;until production&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are several CI and CD tools that &lt;a href="https://github.com/works-with/category/continuous-integration"&gt;integrate with GitHub&lt;/a&gt;, some of which you can install in a few clicks from &lt;a href="https://github.com/marketplace/category/continuous-integration"&gt;GitHub Marketplace&lt;/a&gt;. With so many options, you can pick the best tool for the job—even if it's not the one that comes pre-integrated with your system.&lt;/p&gt;
+&lt;p&gt;The tools that will work best for you depends on many factors, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Programming language and application architecture&lt;/li&gt;
+&lt;li&gt;Operating system and browsers you plan to support&lt;/li&gt;
+&lt;li&gt;Your team's experience and skills&lt;/li&gt;
+&lt;li&gt;Scaling capabilities and plans for growth&lt;/li&gt;
+&lt;li&gt;Geographic distribution of dependent systems and the people who use them&lt;/li&gt;
+&lt;li&gt;Packaging and delivery goals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Of course, it isn't possible to optimize your CI tool for all of these scenarios. The people who build them have to choose which use cases to serve best—and when to prioritize complexity over simplicity. For example, if you like to test small applications written in a particular programming language for one platform, you won't need the complexity of a tool that tests embedded software controllers on dozens of platforms with a broad mix of programming languages and frameworks.&lt;/p&gt;
+&lt;p&gt;If you need a little inspiration for which CI tool might work best, take a look at &lt;a href="https://github.com/explore?trending=repositories#trending"&gt;popular GitHub projects&lt;/a&gt;. Many show the status of their integrated CI/CD tools as badges in their README.md. We've also analyzed the use of CI tools across more than 50 million repositories in the GitHub community, and found a lot of variety. The following diagram shows the relative percentage of the top 10 CI tools used with GitHub.com, based on the most used &lt;a href="https://developer.github.com/v3/repos/statuses/"&gt;commit status contexts&lt;/a&gt; used within our pull requests.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Our analysis also showed that many teams use more than one CI tool in their projects, allowing them to emphasize what each tool does best.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/7321362/32575895-ea563032-c49a-11e7-9581-e05ec882658b.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/32575895-ea563032-c49a-11e7-9581-e05ec882658b.png" alt="Top 10 CI systems used with GitHub.com based on most used commit status contexts" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you'd like to check them out, here are the top 10 tools teams use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://travis-ci.org/"&gt;Travis CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://circleci.com/"&gt;Circle CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jenkins.io/"&gt;Jenkins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.appveyor.com/"&gt;AppVeyor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://codeship.com/"&gt;CodeShip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://try.drone.io/"&gt;Drone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://semaphoreci.com/"&gt;Semaphore CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://buildkite.com/"&gt;Buildkite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.wercker.com/"&gt;Wercker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.jetbrains.com/teamcity/"&gt;TeamCity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It's tempting to just pick the default, pre-integrated tool without taking the time to research and choose the best one for the job, but there are plenty of &lt;a href="https://github.com/works-with/category/continuous-integration"&gt;excellent choices&lt;/a&gt; built for your specific use cases. And if you change your mind later, no problem. When you choose the best tool for a specific situation, you're guaranting tailored performance and the freedom of interchangability when it no longer fits.&lt;/p&gt;
+&lt;p&gt;Ready to see how CI tools can fit into your workflow?&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/category/continuous-integration"&gt;Browse GitHub Marketplace&lt;/a&gt;&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/1872314?v=4"/>
+    <author>
+      <name>Johannes Nicolai</name>
+      <uri>https://github.com/jonico</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2462</id>
+    <published>2017-11-06T18:00:02Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2462-new-in-the-shop-reflective-hoodie"/>
+    <title>New in the Shop: Reflective Hoodie</title>
+    <category term="general"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;Temperatures are dropping, and so is this reflective new hoodie. Layer up, grab a hot beverage, and cozy up into fall while reflecting on all the commits you've made this year.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://shop.github.com/products/reflective-hoodie"&gt;Shop now&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://shop.github.com/products/reflective-hoodie"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/32119865-6587f644-bb0b-11e7-8c6b-388f3c31a7a1.png" alt="Hoodies" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://shop.github.com/products/reflective-hoodie"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/32127678-581bf056-bb2d-11e7-8503-110ce065a8a2.png" alt="Hoodie close up" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars1.githubusercontent.com/u/5945961?v=4"/>
+    <author>
+      <name>Brandi Firestine</name>
+      <uri>https://github.com/bfire</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2461</id>
+    <published>2017-11-03T19:05:57Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2461-search-repositories-by-license"/>
+    <title>Search repositories by license</title>
+    <category term="ship"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;Now you can look for repositories by their license. Search for a specific license using a query such as &lt;code&gt;license:mit&lt;/code&gt; or &lt;code&gt;license:gpl-3.0&lt;/code&gt; or find repositories licensed under a particular license family—Creative Commons, for example—with a query such as &lt;code&gt;license:cc&lt;/code&gt;. We've added a new license filter on the &lt;a href="https://github.com/search/advanced"&gt;Advanced Search page&lt;/a&gt; to help you craft the right query.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/82317/31792579-167f6124-b4e2-11e7-9dc2-58449ea53b20.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/82317/31792579-167f6124-b4e2-11e7-9dc2-58449ea53b20.png" alt="License picker, advanced search page" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With this update, you'll also see repository licenses in even more places around GitHub: organization and user profiles, the new &lt;a href="https://github.com/dashboard/discover"&gt;Discover Repositories&lt;/a&gt; tab, and in search results.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/82317/31792631-50e69ed6-b4e2-11e7-80b4-d05a74f0cf86.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/82317/31792631-50e69ed6-b4e2-11e7-80b4-d05a74f0cf86.png" alt="License info in search results" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We hope having license information more readily available will help you find projects you'd like to contribute to, as well as useful projects that fit your licensing requirements. To learn more, check out &lt;a href="https://help.github.com/articles/searching-repositories#search-by-license"&gt;the documentation&lt;/a&gt; on searching repositories by license.&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/82317?v=4"/>
+    <author>
+      <name>Sarah Vessels</name>
+      <uri>https://github.com/cheshire137</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2459</id>
+    <published>2017-11-01T20:36:19Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2459-and-the-theme-for-game-off-2017-is"/>
+    <title>And the theme for Game Off 2017 is…</title>
+    <category term="general"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/121322/31320176-fa50ef06-ac24-11e7-8b31-93237abbf7ec.png" target="_blank"&gt;&lt;img width="1194" alt="GitHub Game off 2017" src="https://user-images.githubusercontent.com/121322/31320176-fa50ef06-ac24-11e7-8b31-93237abbf7ec.png" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://itch.io/jam/game-off-2017"&gt;Game Off&lt;/a&gt;—our fifth annual game jam celebrating open source is officially underway. The theme for this year’s jam is &lt;strong&gt;throwback&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Let your imagination run wild and interpret that in any way you like, but here are a few possible interpretations for inspiration:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;noun&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a reversion to an earlier ancestral characteristic&lt;/li&gt;
+&lt;li&gt;a person or thing having the characteristics of a former time&lt;/li&gt;
+&lt;li&gt;a nostalgia for something in the past (fashion, movies, literature, games, technology)&lt;/li&gt;
+&lt;li&gt;something retro—a blast from the past&lt;/li&gt;
+&lt;li&gt;something passé—no longer fashionable or popular,&lt;/li&gt;
+&lt;li&gt;throwing something back—as in a ball or reply&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href="#how-to-participate" aria-hidden="true" class="anchor" id="user-content-how-to-participate"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;How to participate&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a game based on the theme over the next month.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/join"&gt;Sign up for a free GitHub account&lt;/a&gt; if you don't already have one.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://itch.io/jam/game-off-2017"&gt;Join the Game Off on itch.io&lt;/a&gt;. If you don’t already have an itch.io account, &lt;a href="https://itch.io/login?intent=jam_submit&amp;amp;return_to=https%3A%2F%2Fitch.io%2Fjam%2Fgame-off-2017"&gt;log in with your GitHub account&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Create a new repository to store the source code and any assets you’re able to share for your entry and push your changes before December 1 13:37 PDT.&lt;/li&gt;
+&lt;li&gt;Submit your game through itch.io.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can participate by yourself or as a team. Multiple submissions are fine. And of course, the use of open source software is encouraged.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#voting" aria-hidden="true" class="anchor" id="user-content-voting"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Voting&lt;/h2&gt;
+&lt;p&gt;This year, voting will open shortly after the jam ends and is open to everyone who’s submitted a game.There’ll be plenty of time to play and vote on the entries.&lt;/p&gt;
+&lt;p&gt;As always, we'll highlight some of our favorites games on the GitHub Blog, and the world will get to enjoy (and maybe even contribute to or learn from) your creations.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#its-dangerous-to-go-alone" aria-hidden="true" class="anchor" id="user-content-its-dangerous-to-go-alone"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;It’s dangerous to go alone&lt;/h2&gt;
+&lt;h3&gt;&lt;a href="#if-youre-new-to-git-github-or-version-control" aria-hidden="true" class="anchor" id="user-content-if-youre-new-to-git-github-or-version-control"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;If you're new to Git, GitHub, or version control…&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://git-scm.com/documentation"&gt;Git Documentation&lt;/a&gt;: everything you need to know about version control and how to get started with Git&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/"&gt;GitHub Help&lt;/a&gt;: everything you need to know about GitHub&lt;/li&gt;
+&lt;li&gt;Any questions about GitHub? Please &lt;a href="https://github.com/contact?form%5Bsubject%5D=GitHub%20Game%20Off"&gt;contact our Support team&lt;/a&gt; and they'll be delighted to help you&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href="#if-youre-new-to-itchio-or-game-development" aria-hidden="true" class="anchor" id="user-content-if-youre-new-to-itchio-or-game-development"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;If you're new to itch.io or game development…&lt;/h3&gt;
+&lt;p&gt;The &lt;a href="https://itch.io/jam/game-off-2017/community"&gt;itch.io community feature&lt;/a&gt; is enabled for this jam—that’s a great place to ask questions specific to the Game Off, share tips, etc.&lt;/p&gt;
+&lt;p&gt;And don’t be shy—share your progress! The official Twitter hashtag for the Game Off is &lt;a href="https://twitter.com/hashtag/githubgameoff?f=tweets"&gt;&lt;code&gt;#GitHubGameOff&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/121322?v=4"/>
+    <author>
+      <name>Lee Reilly</name>
+      <uri>https://github.com/leereilly</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2457</id>
+    <published>2017-11-01T14:49:27Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2457-connect-with-developers-around-the-world-on-the-github-community-forum"/>
+    <title>Connect with developers around the world on the GitHub Community Forum</title>
+    <category term="ship"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://github.community"&gt;&lt;img src="https://user-images.githubusercontent.com/18125109/32192502-576e12ae-bd82-11e7-9d94-9e6bfb03cd4d.png" alt="Introducing GitHub Community Forum" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The open source community proves that when creative people get together on an open platform, great things happen: Code gets better, new technologies emerge, and the way we build software changes. Now there’s a new way to connect with developers around the world. Join the GitHub Community Forum to ask questions, swap stories, and share ideas, regardless of whether you work on public or private projects.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.community"&gt;Explore the Community Forum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.community"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/32242637-88946348-be30-11e7-9e07-25d49fb287df.jpg" alt="Screenshot of the GitHun Community Forum" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You’re already on GitHub, contributing your skills and collaborating on code. With the Community Forum, you can also use GitHub to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn from and support a community of 24 million developers. Tap into the collective knowledge of the world’s largest developer community—and get help from GitHub staff, too.&lt;/li&gt;
+&lt;li&gt;Find the answers you need when you need them. Search for information across all conversations in the Community Forum.&lt;/li&gt;
+&lt;li&gt;Browse tips and tricks for working better. We’ll share how-to articles on everything from cloning a repository to managing an open source community.&lt;/li&gt;
+&lt;li&gt;Get recognized for your contributions and expertise. Your help is important! The more you participate, the higher your rank will be.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Best of all, we’re just getting started. Head over to &lt;a href="https://github.community"&gt;github.community&lt;/a&gt; to write your first post, contribute to the conversation, and let us know what you think! With your feedback, we can keep growing the Community Forum in meaningful ways and release even more features in 2018.&lt;/p&gt;
+&lt;p&gt;The conversation’s already started. We hope you’ll join in!&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars0.githubusercontent.com/u/13561810?v=4"/>
+    <author>
+      <name>Barbara Kozlowski</name>
+      <uri>https://github.com/barbkoz</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2456</id>
+    <published>2017-10-31T18:11:55Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2456-introducing-github-marketplace-free-trials"/>
+    <title>Introducing GitHub Marketplace free trials</title>
+    <category term="ship"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://www.github.com/marketplace/"&gt;&lt;img src="https://user-images.githubusercontent.com/29592817/32191925-ebc72192-bd6f-11e7-8e19-e6c39ad5b2e5.png" alt="Try featured Marketplace apps free for 14 days" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In May, we launched &lt;a href="https://www.github.com/marketplace/"&gt;GitHub Marketplace&lt;/a&gt;—a new way to discover and purchase tools that build on your development process, from continuous integration to project management and code review. Now it’s even easier to perfect your workflow by trying featured Marketplace apps for free.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/free-trials"&gt;See all featured apps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Adding tools to your development process isn’t always as easy as it seems. With the launch of free trials, you can try apps in Marketplace free for 14 days to make sure you choose the right tools for your team. Get an idea of how an app can help you work better, or see how it fits into your workflow.&lt;/p&gt;
+&lt;p&gt;Marketplace is made up of dozens of integrations that work seamlessly with GitHub—and that number is growing every month. With free trials, your team can get started with new tools, refine your process, experiment with developer tools, and find ways to work better, together.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/free-trials"&gt;Browse Marketplace&lt;/a&gt;&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/4432363?v=4"/>
+    <author>
+      <name>Corey Hobbs</name>
+      <uri>https://github.com/chobberoni</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2458</id>
+    <published>2017-10-30T21:53:49Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2458-keep-your-project-boards-up-to-date-automatically"/>
+    <title>Keep your project boards up to date, automatically</title>
+    <category term="ship"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;Today we're releasing the first set of project automation events. Now you can set up your project boards to make updates for you automatically, moving cards between columns when you or a teammate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a new card to a project, moving it from from triage to a default starting column&lt;/li&gt;
+&lt;li&gt;Close an issue&lt;/li&gt;
+&lt;li&gt;Merge a pull request&lt;/li&gt;
+&lt;li&gt;Close a pull request with unmerged changes&lt;/li&gt;
+&lt;li&gt;Reopen an issue or pull request&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/3477155/32173312-ecfaa55e-bd54-11e7-83b2-828562fde6ea.gif" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/3477155/32173312-ecfaa55e-bd54-11e7-83b2-828562fde6ea.gif" alt="Project board automation" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href="https://help.github.com/articles/about-automation-for-project-boards/"&gt;the documentation&lt;/a&gt; to learn how to automate your project boards—and stay tuned! We're working on automation for other common developer workflows, like changes in review or build status on pull requests. &lt;a href="https://github.com/contact"&gt;We'd love to hear from you&lt;/a&gt; about other ways we can help you to do your best work.&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/30075?v=4"/>
+    <author>
+      <name>kneemer</name>
+      <uri>https://github.com/kneemer</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2455</id>
+    <published>2017-10-26T00:39:42Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2455-github-supports-open-source-provisions-in-national-defense-authorization-act"/>
+    <title>GitHub supports open source provisions in National Defense Authorization Act</title>
+    <category term="general"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;This month, GitHub penned a letter urging the United States Senate and House of Representatives to support open source provisions in the &lt;a href="https://www.congress.gov/bill/115th-congress/senate-bill/1519/text"&gt;2018 National Defense Authorization Act (NDAA)&lt;/a&gt;, which sets policies for the Department of Defense (DoD) budget. As the Senate and House move towards agreement on the final NDAA bill, we encourage both chambers to maintain the Senate’s open source provisions, which will ultimately benefit Americans and the global community.&lt;/p&gt;
+&lt;p&gt;Sponsored by Senators from both the Republican and Democratic parties, Mike Rounds and Elizabeth Warren, the provisions show that open source is a bipartisan issue. &lt;a href="https://www.congress.gov/bill/115th-congress/senate-bill/1519/text#idEF966FE7DEFE4F0E91EEEC75FDCD06D5"&gt;Section 886&lt;/a&gt; would require unclassified, non-defense software that is custom developed for the DoD to be open source unless otherwise specified.&lt;/p&gt;
+&lt;p&gt;Makes sense, right? After all, DoD has a &lt;a href="http://gov-oss.org/"&gt;long hisory&lt;/a&gt; of using and creating open source software, and adopting policies to support these practices. Earlier this year, the DoD debuted &lt;a href="https://medium.com/@DefenseDigitalService/code-mil-an-open-source-initiative-at-the-pentagon-5ae4986b79bc"&gt;Code.mil&lt;/a&gt;, which leverages open source to engage the software community and modernize software practices at the agency. DoD is joined by a &lt;a href="https://government.github.com/community/#us-federal"&gt;growing list of U.S. federal agencies&lt;/a&gt; adopting open source, including the &lt;a href="https://www.fedscoop.com/nsa-open-source-nifi/"&gt;National Security Agency&lt;/a&gt; and &lt;a href="https://gcn.com/articles/2017/06/30/nasa-code-sharing.aspx"&gt;National Aeronautics and Space Administration&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are encouraged to see &lt;a href="https://government.github.com/community/"&gt;governments around the world&lt;/a&gt; collaborating and &lt;a href="https://www.canada.ca/en/treasury-board-secretariat/services/innovation/memorandum-understanding-concerning-digital-government.html"&gt;embracing open source&lt;/a&gt; to promote efficiency, innovation, and &lt;a href="https://gdstechnology.blog.gov.uk/2017/10/10/open-source-security-meetup-7-things-we-learned-from-the-cross-government-event/"&gt;security&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our 2017 &lt;a href="https://octoverse.github.com/"&gt;Octoverse report&lt;/a&gt; shows how open source is &lt;a href="https://www.coreinfrastructure.org/"&gt;core infrastructure&lt;/a&gt; embraced by individual developers, startups, and the most valuable companies in the world, allowing all to innovate faster, more efficiently, and more securely.&lt;/p&gt;
+&lt;p&gt;Likewise, government engagement with open source strengthens economic competitiveness, national security, promotes new ideas and technology, and saves taxpayers' money. To learn more about how the government can benefit from open source, check out &lt;a href="https://github.box.com/s/6ektipy8oz8fw7vyo92q81q8r260mdkp"&gt;our letter&lt;/a&gt;!&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/30886850?v=4"/>
+    <author>
+      <name>HauwaOtori</name>
+      <uri>https://github.com/HauwaOtori</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2454</id>
+    <published>2017-10-23T17:57:53Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2454-teaching-efficient-collaboration-at-the-hasso-plattner-institute"/>
+    <title>Teaching efficient collaboration at the Hasso Plattner Institute </title>
+    <category term="education"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;If you’re looking for a real-world approach to computer science education in Germany, you can find it at the Hasso Plattner Institute (HPI) in Potsdam, which offers a practical and engineering-oriented alternative to conventional computer science programs.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/7321362/31841152-18a27b10-b59d-11e7-8135-3950a1a6b985.jpg" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/31841152-18a27b10-b59d-11e7-8135-3950a1a6b985.jpg" alt="Students at Hasso Plattner" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In one of HPI’s undergraduate software engineering courses, researchers Arian Treffer and Christoph Matthies encourage their students to make mistakes, assess where they get stuck, and reflect on their software development process. This way students learn how to deliver the best possible results when working together.&lt;/p&gt;
+&lt;p&gt;The final year undergraduate course "Software Engineering II" features a real-world software development challenge: 20-30 participants jointly develop a single system. Students form small development teams and coordinate within as well as with the other student’s teams. Tutoring, lectures and an introductory exercise are offered alongside the project. All code is published on GitHub under an open source license. Christoph says:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When you leave here, you should have an idea of how to develop software in a team. It's likely that you’ll work with others on some outdated legacy system in your later work life. As long as people have the ability to reflect on how their process, they are more likely to succeed in whatever they want to do.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Arian adds, "If you don't practice good communication and you work in a setting with multiple teams, frustration is inevitable. The first time your code is thrown away because someone else has already completed your ticket is an important learning experience."&lt;/p&gt;
+&lt;p&gt;Focusing on communication and self-organization shapes how students start coding: commit often, write clear commit messages, and learn from your mistakes. But first, students learn the basic tools and processes needed in an introductory exercise. However, managing these exercises for many students—and checking them manually—can get tedious.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#introducing-professor-ci" aria-hidden="true" class="anchor" id="user-content-introducing-professor-ci"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Introducing Professor CI&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://hpi-epic.github.io/profci-exercise/"&gt;Professor CI&lt;/a&gt; introduces students to technical tools using GitHub’s continuous integration services.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Participants work on their own repositories in Github and receive feedback and new challenges from the CI server when they push their code.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Arian is quick to note that using CI to help students fix their problems isn’t completely novel. The innovation, he says, is in how they use Professor CI with GitHub.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What is novel is using GitHub issues to motivate people and basically get them into the habit of tackling issues, writing tests and fixing bugs. If an Issue is done, you’re automatically sent another one that progresses the exercise—this is the new part. Prof. CI simulates a customer requesting new features, changes and bugfixes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/1874003/30919154-9f032362-a36e-11e7-9e4a-2292ce358ed1.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/1874003/30919154-9f032362-a36e-11e7-9e4a-2292ce358ed1.png" alt="workflow of Professor CI" style="max-width:100%;"&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Summary of time from acceptance to completion of student tasks via Professor CI. For more details on the design and implementation, see the corresponding &lt;a href="https://hpi-epic.github.io/profci-exercise/prof_ci.pdf"&gt;paper&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With Professor CI, students can work on their local machines, using their local development tools, and get the benefit of quick feedback from instructors. In turn, instructors have insight into students’ processes and code.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/1874003/30919155-9f07b968-a36e-11e7-997c-711cff4f3935.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/1874003/30919155-9f07b968-a36e-11e7-997c-711cff4f3935.png" alt="marking graph" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Christoph adds, "Automation is great for standardized exercises, but in the actual development project that follows, we rely heavily on human interaction."&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#spot-the-real-requirement" aria-hidden="true" class="anchor" id="user-content-spot-the-real-requirement"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Spot the real requirement&lt;/h2&gt;
+&lt;p&gt;Building software in teams requires talking to real humans, so the next step in the course is gathering clear and concrete requirements from a stakeholder. As anyone who builds software knows, that’s easier said than done.&lt;/p&gt;
+&lt;p&gt;Instead of giving students clear requirements for their final project, Treffer and Matthies assign a co-worker the role of the customer, whose primary job is to—well—be a customer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;He throws ridiculous requirements at the students, and changes his mind constantly. Then the students have to get out of the customer what to build. They don't get requirements. And the development process and all of its artifacts, they have to manage on their own.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This approach ensures that budding engineers get the close-to-real-world experience that the HPI hopes to instill. They develop real skills in listening, negotiating, and communicating that will help them code solid products and reduce wasted effort, wherever their degree takes them.&lt;/p&gt;
+&lt;p&gt;Treffer notes that students often think that development is chugging along better than it is, because they don’t yet have the experience required to identify problems as they arise. Milestones serve as natural points of reflection at which the group can work together to make processes better. They also closely monitor students, both with tutors and using GitHub tools to make sure they don't deviate too much from development best practices.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#reflect-then-reflect-on-your-reflection" aria-hidden="true" class="anchor" id="user-content-reflect-then-reflect-on-your-reflection"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Reflect, then reflect on your reflection&lt;/h2&gt;
+&lt;p&gt;Treffer and Matthies use a variety of exercises that help students find out what worked, what didn’t, and how to make next time better. &lt;a href="https://luis-goncalves.com/sailboat-exercise-sailboat-retrospective/"&gt;The Sailboat&lt;/a&gt; is an exercise that students use to reflect on the development process.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/7321362/31900185-8472c548-b7d2-11e7-9c7d-4045f4aaa1fd.jpg" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/31900185-8472c548-b7d2-11e7-9c7d-4045f4aaa1fd.jpg" alt="Reflection exercises at HPI" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this exercise, the sun is what went right and the wind is what pushed the team in the right direction. The anchor represents what slowed the team down, and the rocks, of course, are potential future problems. Marking each feature of the boat scene allows the group to candidly diagnose how they work together.&lt;/p&gt;
+&lt;p&gt;Reflection exercises allow the students to get closer to one another and their professors to more intimately understand their students. Being able to collectively analyze and discuss what went right and what went wrong allows for some resolution to what might have been a rough sail. It also helps students learn how to collectively develop a process that will, ultimately, create better software and more efficient development time with minimal waste.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Basically, the most important aspect of our lecture is that students learn to apply what they're doing to identifying problems with their development process and learn how to improve the process. It’s about figuring out which process works best for your team and context.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;&lt;a href="#for-further-reading" aria-hidden="true" class="anchor" id="user-content-for-further-reading"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;For further reading:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.benlinders.com/2015/how-futurespectives-help-teams-to-reach-their-goals/"&gt;How futurespectives help teams to reach their goals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://luis-goncalves.com/sailboat-exercise-sailboat-retrospective/"&gt;Sailboat reflection activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.funretrospectives.com/the-peaks-and-valleys-timeline/"&gt;Peaks and valleys&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.benlinders.com/2015/how-futurespectives-help-teams-to-reach-their-goals/"&gt;Futurespective from the the retrospective Handbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.futureworksconsulting.com/blog/2010/07/26/circles-and-soup/"&gt;Circles and soup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.funretrospectives.com/open-the-box/"&gt;Open the box&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <media:thumbnail url="https://avatars0.githubusercontent.com/u/1874003?v=4"/>
+    <author>
+      <name>Vanessa</name>
+      <uri>https://github.com/mozzadrella</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2451</id>
+    <published>2017-10-19T18:57:06Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2451-game-off-our-annual-game-jam-returns-in-november"/>
+    <title>Game Off, our annual game jam returns in November</title>
+    <category term="engineering"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://itch.io/jam/game-off-2017"&gt;&lt;img alt="GitHub Game Off 2017" src="https://user-images.githubusercontent.com/121322/31641069-25b4c834-b297-11e7-91c8-01c067fa4373.png" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://itch.io/jam/game-off-2017"&gt;Game Off&lt;/a&gt;—our fifth annual game jam returns in just two weeks!&lt;/p&gt;
+&lt;p&gt;A game jam is a hackathon for creating video games. Although most game jams run for 24-72 hours, the Game Off runs for the entire month of November. You'll have 30 days to create a game inspired by or loosely based on a theme that we'll announce Wednesday, November 1, at 13:37 pm PDT.&lt;/p&gt;
+&lt;p&gt;As always, you're encouraged to use open source game engines, libraries, and tools, but you're free to use any technology you want. It's a perfect excuse to experiment with something new, too.&lt;/p&gt;
+&lt;p&gt;This year, the Game Off will take place on &lt;a href="https://itch.io/"&gt;itch.io&lt;/a&gt;–an open marketplace for indie game developers and platform for running game jams among other things. Best of all, this year, &lt;em&gt;you'll&lt;/em&gt; be the judging the entries.&lt;/p&gt;
+&lt;p&gt;We'll announce all the latest updates on our &lt;a href="https://github.com/blog"&gt;blog&lt;/a&gt; and &lt;a href="https://twitter.com/github"&gt;Twitter account&lt;/a&gt;. Stay tuned and follow along with the &lt;a href="https://twitter.com/hashtag/GitHubGameOff"&gt;&lt;code&gt;#GitHubGameOff&lt;/code&gt;&lt;/a&gt; hashtag!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://itch.io/jam/game-off-2017"&gt;&lt;strong&gt;Join the jam on itch.io today&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GLHF! We can't wait to &lt;del&gt;see&lt;/del&gt; play what you make &lt;code&gt;&amp;lt;3&lt;/code&gt;&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/121322?v=4"/>
+    <author>
+      <name>Lee Reilly</name>
+      <uri>https://github.com/leereilly</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2450</id>
+    <published>2017-10-18T17:00:43Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2450-doubling-bug-bounty-rewards"/>
+    <title>Doubling Bug Bounty rewards</title>
+    <category term="engineering"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;img src="https://user-images.githubusercontent.com/121322/31412870-9f754c6e-adcb-11e7-82f2-977b70ec6321.png" alt="Hack the World 2017" style="border:0px;"&gt;
+&lt;p&gt;We're coming up on four years since the Bug Bounty program was &lt;a href="https://github.com/blog/1770-github-security-bug-bounty"&gt;first announced&lt;/a&gt;. A lot has changed in that time, and we constantly try to keep our reward structure inline with top security bug bounty programs. We're excited to announce that starting today we're doubling our payout amounts, bringing the minimum and maximum payouts to &lt;strong&gt;$555&lt;/strong&gt; and &lt;strong&gt;$20,000&lt;/strong&gt;, respectively. This means that any report eligible for a bounty will be met with at least a $555 reward. This doesn't mean we're raising the bar for what is considered a valid report, we're simply raising the payouts.&lt;/p&gt;
+&lt;p&gt;This bump to our payouts aligns with &lt;a href="https://www.hackerone.com/hacktheworld/2017"&gt;Hack the World&lt;/a&gt;, an annual hacking competition by HackerOne, which kicked off this morning and runs until November 18th. During this time participants compete against each other to find the most security vulnerabilities across all sites on HackerOne's platform. We're one of the sponsors, which means hackers will be rewarded with twice the reputation points on HackerOne when finding bugs on GitHub over the next month! As an additional incentive, we will also be rewarding &lt;em&gt;all&lt;/em&gt; valid submissions with &lt;strong&gt;free unlimited private repositories for life&lt;/strong&gt;. The increased bounty payouts are here to stay, but unlimited private repositories will only rewarded on reports submitted on or before November 18th!&lt;/p&gt;
+&lt;p&gt;Ready to compete? Submit all reports to our &lt;a href="https://hackerone.com/github"&gt;Bug Bounty program&lt;/a&gt;. For more details on the competition, please visit the &lt;a href="https://www.hackerone.com/hacktheworld/2017"&gt;Hack the World website&lt;/a&gt;.&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/6415223?v=4"/>
+    <author>
+      <name>brentjo</name>
+      <uri>https://github.com/brentjo</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2452</id>
+    <published>2017-10-17T23:21:14Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2452-get-started-with-hacktoberfest"/>
+    <title>Get started with Hacktoberfest</title>
+    <category term="general"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/121322/30467317-a5db5d10-9998-11e7-9cce-c14dc226dd01.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/121322/30467317-a5db5d10-9998-11e7-9cce-c14dc226dd01.png" alt="Get started with Hacktoberfest" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you're an open source maintainer, it's time to get your repository &lt;a href="https://hacktoberfest.digitalocean.com/"&gt;ready for Hacktoberfest&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#why" aria-hidden="true" class="anchor" id="user-content-why"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Why?&lt;/h2&gt;
+&lt;p&gt;Communities grow during Hacktoberfest. Just ask Peter Tseng, now a core contributor of Exercism, which he found during Hacktoberfest. He said, "[it] was my first time being an open source maintainer (not counting projects in which I'm the only contributor)... I've learned a lot about working with others from that."&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/home_assistant/status/793512257145729024"&gt;Home Assistant also received almost 250 pull requests&lt;/a&gt; last year. That's significant impact for one repository—not to mention the 92,259 other PRs that were opened across 29,287 other repositories.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#how-to-get-started" aria-hidden="true" class="anchor" id="user-content-how-to-get-started"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;How to get started&lt;/h2&gt;
+&lt;p&gt;Below are a few highlights from our &lt;a href="https://opensource.guide/"&gt;Open Source Guides&lt;/a&gt; to help get you set up.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Run some maintenance on your documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Remove barriers from anyone who wants to get started quickly and add some clarity so that their contributions meet expectations.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a README that helps people understand why your project matters and what your users can do with it. &lt;a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2"&gt;See an example template&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Encourage contributions by including a CONTRIBUTING.md file that explains your expectations for a submission and how to best participate in your project. &lt;a href="https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md"&gt;Try this template&lt;/a&gt;, for example.&lt;/li&gt;
+&lt;li&gt;Identify the ground rules for contributor behavior, and facilitate a healthy and constructive community by adding a Code of Conduct, for example &lt;a href="http://contributor-covenant.org/"&gt;the Contributor Covenant&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Add a license to tell others what they can and can't do with your source code. A lot of open source projects use &lt;a href="https://choosealicense.com/"&gt;choosealicense.com&lt;/a&gt; to confirm the best one for their project.&lt;/li&gt;
+&lt;li&gt;Provide an issue template that supports new contributions by outlining your expectations. Start with &lt;a href="https://github.com/hoodiehq/camp/blob/gh-pages/.github/ISSUE_TEMPLATE.md"&gt;this example Template&lt;/a&gt; from Hoodie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Increase your searchability&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You want to make it easy for the right people with the right skills to find you, right?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If any and all community contributions are welcome, add #Hacktoberfest to your &lt;a href="https://help.github.com/articles/classifying-your-repository-with-topics/"&gt;repository's topics&lt;/a&gt;, located directly under your repository description.
+&lt;ul&gt;
+&lt;li&gt;Add more topics to the repository. You can do this for languages, project types (games, web design, app, etc), and other skills that appeal to broad ability sets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;To accomplish specific goals on open tasks, &lt;a href="https://help.github.com/articles/creating-and-editing-labels-for-issues-and-pull-requests/"&gt;create a Hacktoberfest label&lt;/a&gt; for your Issues and Pull Requests.
+&lt;ul&gt;
+&lt;li&gt;Don't forget to assign the Hacktoberfest label to any open Issues and PR's that welcome community contributions after creation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you receive “spammy” pull requests, please let us know by applying the “invalid” label.&lt;/p&gt;
+&lt;p&gt;And that's it! &lt;a href="https://hacktoberfest.digitalocean.com/"&gt;Happy Hacking&lt;/a&gt;. &lt;g-emoji alias="jack_o_lantern" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f383.png" ios-version="6.0"&gt;🎃&lt;/g-emoji&gt;&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars0.githubusercontent.com/u/13326548?v=4"/>
+    <author>
+      <name>Eric Hollenberry</name>
+      <uri>https://github.com/hollenberry</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2453</id>
+    <published>2017-10-17T23:16:55Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2453-mission-report-github-universe-2017"/>
+    <title>Mission report: GitHub Universe 2017</title>
+    <category term="conferences"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://githubuniverse.com/"&gt;&lt;img src="https://user-images.githubusercontent.com/6165035/29682337-83f3017e-88bf-11e7-846c-138e9639b87f.png" alt="universe_blog_header" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This week, more than 1,000 developers from around the world joined us at Pier 70 in San Francisco for our flagship conference. We learned new skills in workshops, heard from industry experts about the future of software development, and explored new GitHub products powered by the world’s largest collection of open source data.&lt;/p&gt;
+&lt;p&gt;Here’s a look back at who came, what they saw, and how they conquered this &lt;a href="https://githubuniverse.com"&gt;Universe&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/7321362/31693181-1400ab1a-b352-11e7-9bb3-669bed2a38b5.jpg" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/31693181-1400ab1a-b352-11e7-9bb3-669bed2a38b5.jpg" alt="GitHub Universe 2017" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#whats-new-in-the-github-universe" aria-hidden="true" class="anchor" id="user-content-whats-new-in-the-github-universe"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;What’s new in the GitHub universe&lt;/h2&gt;
+&lt;p&gt;We kicked off the first day of the conference with an opening keynote and product updates from GitHub CEO Chris Wanstrath, Data Engineering Manager Miju Han, and Platform Engineering Manager Kyle Daigle.&lt;/p&gt;
+&lt;p&gt;They introduced new experiences that can help you protect your code and discover relevant projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Keep track of the projects your code depends on with the new &lt;a href="https://help.github.com/articles/listing-the-packages-that-a-repository-depends-on"&gt;dependency graph&lt;/a&gt; (and soon, you’ll get security alerts and suggested fixes from your dependency graph)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find hand-picked resources and projects like yours with &lt;a href="https://gitHub.com/explore"&gt;Explore&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get smart recommendations from your new &lt;a href="https://github.com/dashboard/discover"&gt;“Discover repositories” feed&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And we shared a data-filled review of the projects, people, and teams of 2017 (and the last ten years) that you can explore further in &lt;a href="https://octoverse.github.com/"&gt;this year’s Octoverse&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/updates"&gt;See all of the updates&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://octoverse.github.com/"&gt;&lt;img src="https://user-images.githubusercontent.com/7321362/31693264-6fa985b8-b352-11e7-88b8-7987dbabc79b.png" alt="Octoverse" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;From Felipe Hoffa’s exploration of what we learn from 42 TB of Google code to Flora Dai’s search for efficient music discovery at Pandora, the 40 sessions that followed introduced new ideas from unexplored parts of the software universe.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#workshops" aria-hidden="true" class="anchor" id="user-content-workshops"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Workshops&lt;/h2&gt;
+&lt;p&gt;Attendees who made it to the workshops got a full day of hands-on building with leading technologies and concepts, taught by the people who know them best. They built new Electron apps, learned new command line tricks, and discussed how to make their teams more inclusive in an inspiration-rich gallery space.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#after-party" aria-hidden="true" class="anchor" id="user-content-after-party"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;After Party&lt;/h2&gt;
+&lt;p&gt;We wrapped up the first day of the conference with a benefit concert supporting Maven—our nonprofit partner that empowers LGBTQ youth to network, organize, and build tech solutions for social change—on National Coming Out Day. Our headliner, Neon Trees, played their hits as more of the community met each other over food truck bites and drinks at Mezzanine.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#sponsors" aria-hidden="true" class="anchor" id="user-content-sponsors"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Sponsors&lt;/h2&gt;
+&lt;p&gt;Our business and community sponsors kept the recharge power, waffle cones, cold brews, juice, and inspiration flowing throughout the event. Universe wouldn’t be possible without the imaginations and contributions from these organizations.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/6165035/31190502-1c86c772-a8f0-11e7-98dd-2ff175f10a6d.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/6165035/31190502-1c86c772-a8f0-11e7-98dd-2ff175f10a6d.png" alt="Universe sponsor logos" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a href="#thank-you-github-community" aria-hidden="true" class="anchor" id="user-content-thank-you-github-community"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Thank you, GitHub community&lt;/h2&gt;
+&lt;p&gt;Thanks for being part of 1.5 billion commits over the last decade together and for helping our third Universe take flight. If the last ten years are any indication, we’ve got a lot to look forward to. See you next year at Universe or at an &lt;a href="https://github.com/events"&gt;event near you&lt;/a&gt;!&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/f0BzD1zCye0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;</content>
+    <media:thumbnail url="https://avatars3.githubusercontent.com/u/7321362?v=4"/>
+    <author>
+      <name>Stephanie Wills</name>
+      <uri>https://github.com/stephbwills</uri>
+      <email></email>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Post/2449</id>
+    <published>2017-10-17T20:26:52Z</published>
+    <link rel="alternate" type="text/html" href="https://github.com/blog/2449-level-up-your-workflow-with-these-new-marketplace-apps"/>
+    <title>Level up your workflow with these new Marketplace Apps</title>
+    <category term="ship"/>
+    <summary></summary>
+    <content type="html" xml:base="https://github.com/blog">&lt;p&gt;&lt;a href="https://user-images.githubusercontent.com/28809441/31586935-3e6f116e-b18d-11e7-98e1-0a24683e90cc.png" target="_blank"&gt;&lt;img src="https://user-images.githubusercontent.com/28809441/31586935-3e6f116e-b18d-11e7-98e1-0a24683e90cc.png" alt="github-marketplace" style="max-width:100%;"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We're welcoming four new apps to &lt;a href="https://github.com/marketplace"&gt;GitHub Marketplace&lt;/a&gt;—built to help you review, secure, and monitor your code.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="#code-review" aria-hidden="true" class="anchor" id="user-content-code-review"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Code review&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/accesslint"&gt;AccessLint&lt;/a&gt; brings automated web accessibility testing into your development workflow. When a pull request is opened, AccessLint reviews the changes and comments with any new accessibility issues, giving you quick, timely, and targeted feedback, before your code goes live.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="#dependency-management" aria-hidden="true" class="anchor" id="user-content-dependency-management"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Dependency management&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/dependabot"&gt;Dependabot&lt;/a&gt; helps you keep your Ruby, JavaScript, Python, and PHP dependencies up-to-date. Every day, Dependabot pulls down your dependency files and looks for any outdated requirements. If dependencies are out-of-date, it opens individual pull requests so they can be updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/greenkeeper"&gt;Greenkeeper&lt;/a&gt; brings safety and consistency to npm with real-time monitoring and automatic update testing for your dependencies. It acts as a friendly bot that sends you informative, actionable pull requests and issues so you can easily keep your software up-to-date and in working condition.&lt;/p&gt;
+&lt;h3&gt;&lt;a href="#monitoring" aria-hidden="true" class="anchor" id="user-content-monitoring"&gt;&lt;span aria-hidden="true" class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Monitoring&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/marketplace/logrocket"&gt;LogRocket&lt;/a&gt; lets you replay problems as if they happened in your own browser. Instead of guessing why errors happen or asking users for screenshots and logs, LogRocket provides you with a video recording of exactly what the user saw, along with console logs, network requests, and application states so you can quickly pinpoint what went wrong.&lt;/p&gt;
+&lt;p&gt;We’re excited to keep giving developers the tools they need to build software and the flexibility to evolve their workflows as their needs change. Discover new tools on &lt;a href="https://github.com/marketplace"&gt;GitHub Marketplace&lt;/a&gt; and integrate them into your workflow in minutes.&lt;/p&gt;</content>
+    <media:thumbnail url="https://avatars0.githubusercontent.com/u/28809441?v=4"/>
+    <author>
+      <name>Jessie</name>
+      <uri>https://github.com/jessieabby</uri>
+      <email></email>
+    </author>
+  </entry>
+</feed>

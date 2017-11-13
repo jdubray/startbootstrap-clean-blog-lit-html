@@ -1,7 +1,7 @@
 
 import {html, render} from '../js/lit-html.js';
 import { repeat } from '../js/repeat.js'
-
+import { unsafeHTML } from '../js/unsafe-html.js'
 'use strict';
 
 let cssPath = 'css/' ;
@@ -113,11 +113,9 @@ let _theme = {
                                 <h2 class="post-title">
                                     ${post.title}
                                 </h2></a>
-                                <!-- h4 class="post-subtitle">
-                                    // static content is not currently supported
-                                    // we cannot display the post summary
-                                    // $ {post.content[0]._.split('.')[0]}
-                                </h4 -->
+                                <h4 class="post-subtitle">
+                                    ${unsafeHTML(post.content[0]._.split('.')[0])}
+                                </h4>
                             
                             <p class="post-meta">Posted by <a href="#">${post.author[0].name[0]}</a>  [${post.category[0].$.term}]  ${post.published[0].substring(0,post.published[0].length - 10)}</p>
                         </div>
