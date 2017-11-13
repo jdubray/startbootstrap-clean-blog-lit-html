@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog | SAM Pattern</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- div id="header-representation">
+    
+    </div -->
+    <state-representation id="header"></state-representation>
+
+    <!-- Main Content -->
+    <state-representation id="page">
+    
+    </state-representation>
+    <hr>
+
+    <!-- Footer -->
+    <state-representation id="footer">
+        
+    </state-representation>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+    <!-- script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script -->
+    
+    <script type="text/javascript">
+        var a = {} ;
+        
+        let intent = function(i, f) {
+            window[i || '_'] = f 
+        }
+		
+		initPageLifeCycle() ;
+
+	</script>
+	<script type="module">
+
+          import {html, render} from './js/lit-html.js';
+
+
+		  // standart SAM  
+          import {state}       from './sam/state.js' ; 
+          import {model}       from './sam/model.js' ;
+          import {actions}     from './sam/actions.js' ;
+          import {view}        from './sam/view.js' ;
+		  
+		  // application specific
+		  import {theme}       from './components/theme.js' ;
+		  
+		  // initial model, from file
+		  // import {data}		   from './components/model.data.js'
+
+		  // initial model, from server
+		  import {data}		   			from '../app/v1/model.js' 
+		  
+          // You can also fetch the site's metadata from a static file
+          //import {data}                     from './static.model.js'
+
+          import {init, 
+			      getParameterByName,
+				  preparePage, 
+				  checkBackButton} 		from './components/init.components.js' 
+
+
+          class Renderer extends HTMLElement {
+
+            constructor() {
+                super();
+                //this.attachShadow({mode: 'open'});
+                
+            }
+
+            render(representation) {
+                // Render state representation
+                if (!this.needsRender) {
+                    this.needsRender = true;
+                    Promise.resolve().then(() => {
+                        this.needsRender = false;
+                        render(representation, this);
+                    });
+                }
+            }
+
+          }
+
+         
+          let sr = window.customElements.get('state-representation') 
+          if (!sr) {
+            window.customElements.define('state-representation', Renderer)      
+          }
+        //   let page = customElements.define('page-representation', HTMLElement)
+        //   let footer = customElements.define('footer-representation', HTMLElement);      
+
+		  var display = function(representation) {
+                let header = document.getElementById('header') 
+			    let page = document.getElementById('page') 
+			    let footer = document.getElementById('footer') 
+			    preparePage(model) 
+                if (representation.header) { 
+                    // document.getElementById('header-representation').innerHTML = representation.header ; 
+                    header.render(representation.header)
+                }
+                if (representation.page) { 
+                    page.render(representation.page);
+                }
+                if (representation.footer) { 
+                    footer.render(representation.footer);
+                }
+				initElements() ;
+				checkBackButton(model) ;
+		  }
+		  
+		  var components = {
+			  updates: [],
+			  actions: [],
+			  filters:[],
+			  postProcessings: [],
+			  intents: [],
+			  states: {
+				  "ready": {
+				  		nextAction: () => {return true;}
+			  		}
+				},
+			  data: data
+		  } ;
+
+		  
+			let blogid = getParameterByName('blogid',window.location.href); 
+			if (blogid) {
+				components.data.blog.blogid = blogid ;
+				components.data.menuItem = 'blog';
+			} 
+		 
+            customElements.whenDefined('state-representation').then(() => {
+  
+                // add actions and updates
+                init(components) ;
+
+                var options = {
+                    host : "http://localhost:5625"
+                } ;
+
+                // wire the elements of the pattern
+                state.init(view, theme, display, components) ;
+                model.init(state, components, options) ;
+                actions.init(model.present, options) ;
+                components.actions.forEach(function(action) {
+                    actions[action.name] = function(data, present) {
+                        return action.implementation(data, present, model) ;
+                    }
+                }) ;
+
+                view.init(model,theme(options))
+                
+                a = actions ;
+
+                // render initial state
+                state.representation(model) ;
+
+                console.log('custome element defined');
+            })
+        
+    </script>
+
+</body>
+
+</html>

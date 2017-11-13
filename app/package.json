@@ -1,0 +1,39 @@
+{
+  "name": "jessie",
+  "description": "sam-safe middleware with blog sample harness",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server-model.js"
+  },
+  "dependencies": {
+    "@google/maps": "^0.4.5",
+    "body-parser": "*",
+    "chai": "^4.1.2",
+    "config": "^1.24.0",
+    "cookie-parser": "",
+    "cors": "^2.8.1",
+    "express": "4.16.x",
+    "jquery-autocomplete": "^1.2.1",
+    "log4js": "^2.3.11",
+    "morgan": "1.9.x",
+    "node-uuid": "*",
+    "nodemailer": "^4.3.1",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "tingodb": "^0.5.1",
+    "xml2js": "^0.4.17"
+  },
+  "preferGlobal": false,
+  "private": true,
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "es6-transpiler": "^0.7.18",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-es6-transpiler": "^1.0.1",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.1"
+  }
+}
