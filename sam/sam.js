@@ -28,14 +28,14 @@
 
 let SAM = function ({actions, model, state, view, theme, display, components, options}) {
     // wire the elements of the pattern
-    state.init(view, theme, display, components) ;
-    model.init(state, components, options) ;
-    actions.init(model.present, options) ;
+    state.init(view, theme, display, components) 
+    model.init(state, components, options) 
+    actions.init(model.present, options) 
     components.actions.forEach(function(action) {
         intent(action.name, function(data, present) {
-            return action.implementation(data, present, model) ;
+            return action.implementation(data, present, model) 
         })
-    }) ;
+    }) 
 
     view.init(model,theme(options))
 
