@@ -26,7 +26,7 @@ module.exports = function( feedURL, path, domain, collectionName) {
 
             if (result.rss) {
                 blogEntries = result.rss.channel[0].item ;
-                blogHref = result.rss.channel[0]['atom:link'][0].$.href;
+                blogHref = result.rss.channel[0]['link'][0];
                 //blogAtomHref = result.feed.link[1].$.href;
                 blogTitle = result.rss.channel[0].title[0];
                 //blogUpdated = result.feed.updated.split('T')[0] ;

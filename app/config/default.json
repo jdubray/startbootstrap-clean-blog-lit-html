@@ -7,7 +7,7 @@
     "dbPath" : "./dbs/",
     "googleMapsAPIKey" : "your_google_maps_api_key",
     //"feed": "https://www.infoq.com/feed",
-    "feed": "https://github.com/blog.atom",
+    "feed": "https://news.ycombinator.com/rss",
     "blogPage": "./asana-html/blog.html",
 
     "log4js": {

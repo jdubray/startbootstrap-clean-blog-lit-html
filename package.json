@@ -18,10 +18,22 @@
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
-    "jquery": "^1.11.3"
+    "jquery": "^3.3.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-clean-blog.git"
+  },
+  "dependencies": {
+    "@google/maps": "^0.4.5",
+    "config": "^1.30.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "log4js": "^2.5.3",
+    "morgan": "^1.9.0",
+    "request-promise": "^4.2.2",
+    "tingodb": "^0.5.1",
+    "xml2js": "^0.4.19"
   }
 }

@@ -106,18 +106,18 @@ let _theme = {
                 <div class="blogPostWrap">
                     ${repeat(
                         params.posts, 
-                        post => post.link[0].$.href,
+                        post => post.link,
                         post => html`
                         <div class="post-preview">
-                            <a href="${post.link[0].$.href}">
+                            <a href="${post.link}">
                                 <h2 class="post-title">
                                     ${post.title}
                                 </h2></a>
                                 <h4 class="post-subtitle">
-                                    ${unsafeHTML(post.content[0]._.split('.')[0])}
+                                    ${unsafeHTML(post.description)}
                                 </h4>
                             
-                            <p class="post-meta">Posted by <a href="#">${post.author[0].name[0]}</a>  [${post.category[0].$.term}]  ${post.published[0].substring(0,post.published[0].length - 10)}</p>
+                            ${(post.author) ? `<p class="post-meta">Posted by <a href="#">${post.author[0].name[0]}</a>  [${post.category[0].$.term}]  ${post.published[0].substring(0,post.published[0].length - 10)}</p>`: ``}
                         </div>
                         <hr>`
                     )}
