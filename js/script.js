@@ -9,9 +9,9 @@ var initPageLifeCycle = function() {
 					let hashName = location.hash.split("#")[1];
 					
 					if (hashName && (hashName !== '')) {
-						a.setMenuItem({menuItem:hashName, popped: true}) ;						
+						window.setMenuItem({menuItem:hashName, popped: true}) ;						
 					} else {
-						a.setMenuItem({menuItem:'home', popped: true}) ;	
+						window.setMenuItem({menuItem:'home', popped: true}) ;	
 					}
 				});
 			}
